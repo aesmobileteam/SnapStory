@@ -1,0 +1,302 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        layout="@layout/header_layout" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#65C0B7"
+        android:onClick="submit"
+        android:text="Next"
+        android:textColor="#084460"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit"
+        android:layout_below="@+id/header"
+        android:orientation="vertical" >
+
+        
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+                    
+                    
+                    
+                    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF" >
+
+            <LinearLayout
+                android:id="@+id/layoutText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/report_top_page"
+                android:orientation="vertical" 
+                android:padding="5dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textSchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                     android:visibility="gone"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#FFFFFF" >
+
+                        <ImageButton
+                            android:id="@+id/picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camimg" />
+                    </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#F4F4F4" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:text="New Report"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#053855"
+                android:textStyle="bold" />
+        </RelativeLayout> -->
+                    
+                    
+
+                    <LinearLayout style="@style/FormLayout" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="14dp"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:id="@+id/personLayout"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        style="@style/FormLayout"
+                        android:layout_width="match_parent" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="sans-serif-light"
+                            android:text="BirthDay"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                        
+                        <EditText
+                            android:id="@+id/txtbirthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="14dp"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"                              
+                        	android:onClick="myClickHandler"
+                        	android:clickable="true" 
+                        	android:focusable="false"
+                            android:textSize="18sp" />
+
+                        <!-- <DatePicker
+                            android:id="@+id/birthday"
+                            style="@android:style/Widget.DatePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:background="@null"
+                            android:calendarViewShown="false"
+                            android:datePickerMode="spinner"
+                            android:spinnersShown="false" /> -->
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout style="@style/FormLayout" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="24dp"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="Gender"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+                            android:id="@+id/gender_rg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/female_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="24dp"
+                                android:buttonTint="@android:color/black"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Female" />
+
+                            <RadioButton
+                                android:id="@+id/male_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@android:color/black"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Male" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout style="@style/FormLayout" >
+
+                        <TextView
+                            android:id="@+id/signature_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="Signature"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/signature_button"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_toRightOf="@id/signature_tv"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Take Signature" />
+
+                        <ImageView
+                            android:id="@+id/signature_image_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="24dp"
+                            android:layout_toRightOf="@id/signature_tv"
+                            android:fontFamily="sans-serif-light"
+                            android:scaleType="fitXY"
+							android:visibility="gone" />
+                    </LinearLayout>
+                    
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF" >
+
+                        <ImageButton
+                            android:id="@+id/picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camimg" />
+                    </RelativeLayout> -->
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

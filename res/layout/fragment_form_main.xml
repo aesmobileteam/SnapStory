@@ -1,0 +1,269 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.steve.snapstory.FormActivityFragment"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:background="@drawable/report_top_page">
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@drawable/report_profile_img"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:id="@+id/layoutText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/profileImage">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Student M E"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/textName"
+                    android:textColor="#377B88"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Kisimbiri School"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:textColor="#0C3A54"
+                    android:id="@+id/textView4"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4F4F4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="New Report"
+                android:textStyle="bold"
+                android:textColor="#053855"
+                android:id="@+id/textView"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:id="@+id/layout">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:background="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/FormLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_marginLeft="14dp"
+                            android:textSize="18sp"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <LinearLayout
+                        style="@style/FormLayout"
+                        android:layout_width="match_parent" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BirthDay"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@android:color/black" />
+
+                        <DatePicker
+                            android:id="@+id/birthday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:datePickerMode="spinner"
+                            android:calendarViewShown="false"
+                            android:spinnersShown="false"
+                            style="@android:style/Widget.DatePicker"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <LinearLayout
+                        style="@style/FormLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Gender"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginRight="24dp"/>
+
+                        <RadioGroup
+                            android:id="@+id/gender_rg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/female_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="24dp"
+                                android:fontFamily="sans-serif-light"
+                                android:buttonTint="@android:color/black"
+                                android:text="Female"/>
+
+                            <RadioButton
+                                android:id="@+id/male_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:buttonTint="@android:color/black"
+                                android:text="Male"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <LinearLayout
+                        style="@style/FormLayout">
+                        <TextView
+                            android:id="@+id/signature_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="Signature"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/black" />
+
+                        <Button
+                            android:id="@+id/signature_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="24dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Take Signature"
+                            android:layout_toRightOf="@id/signature_tv" />
+
+                        <ImageView
+                            android:id="@+id/signature_image_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="24dp"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_toRightOf="@id/signature_tv"
+                            android:scaleType="fitXY"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+
+                        <ImageButton
+                            android:id="@+id/picture"
+                            android:background="@null"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/camimg"
+                            android:layout_margin="10dp"
+                            android:scaleType="fitXY"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

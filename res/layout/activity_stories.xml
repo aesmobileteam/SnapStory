@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context="com.snapstory.StoriesActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+    
+    <ScrollView 
+        android:id="@+id/ScrollStory"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_above="@+id/create_story"
+        android:layout_below="@+id/header">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+            
+
+            
+
+            <LinearLayout
+                android:id="@+id/layoutText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileImage"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:background="@drawable/report_top_page">
+
+                <TextView
+                    android:id="@+id/projectName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/projectLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+
+                <!-- <TextView
+                    android:id="@+id/projectDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="Lorem Ipsum is simply dummy text of the industry."
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="10dp"
+                    android:textColor="#FFFFFF" /> -->
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#F4F4F4">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Report Templates"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#053855"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.snapstory.util.ShanListView
+            android:id="@+id/stories_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:divider="#C8C8C8"
+            android:dividerHeight="1dp" />
+
+        
+    </LinearLayout>
+    
+    
+    </ScrollView>
+    
+    
+    <Button
+            android:id="@+id/create_story"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="New Story"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

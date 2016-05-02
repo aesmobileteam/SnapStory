@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SnapStory</string>
+    <string name="title_activity_form">Form Submission</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_projects_activty">Projects</string>
+    <string name="title_activity_projects">Projects</string>
+    <string name="welcome_message">Welcome back</string>
+
+</resources>

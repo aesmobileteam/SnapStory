@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5CB7B2">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/snap_image"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ProjectsList"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Projects List"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"
+            android:id="@+id/textView6" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/transparent"/>
+
+    <LinearLayout
+        android:id="@+id/SignOut"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Sign Out"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+            android:id="@+id/textView7" />
+    </LinearLayout>
+</LinearLayout>
